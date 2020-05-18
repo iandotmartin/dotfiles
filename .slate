@@ -1,0 +1,32 @@
+# Abstract positions
+alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
+alias lefthalf move screenOriginX;screenOriginY screenSizeX*.6;screenSizeY
+alias righthalf move screenOriginX+screenSizeX*.6;screenOriginY screenSizeX*.4;screenSizeY
+alias topleft corner top-left resize:screenSizeX*.6;screenSizeY/2
+alias topright corner top-right resize:screenSizeX*.4;screenSizeY/2
+alias bottomleft corner bottom-left resize:screenSizeX*.6;screenSizeY/2
+alias bottomright corner bottom-right resize:screenSizeX*.4;screenSizeY/2
+
+# Locations
+## Numpad
+bind pad1:cmd ${bottomleft}
+bind pad3:cmd ${bottomright}
+bind pad4:cmd ${lefthalf}
+bind pad5:cmd ${full}
+bind pad6:cmd ${righthalf}
+bind pad7:cmd ${topleft}
+bind pad9:cmd ${topright}
+bind pad-:cmd throw 0
+bind pad+:cmd throw 1
+bind pad*:cmd relaunch
+
+# Laptop Keyboard 
+bind 1:alt,cmd move screenOriginX;screenOriginY screenSizeX*.5;screenSizeY
+bind 2:alt,cmd move screenOriginX+screenSizeX*.5;screenOriginY screenSizeX*.5;screenSizeY
+bind w:alt,cmd corner top-right resize:screenSizeX*.5;screenSizeY/2
+bind a:alt,cmd corner top-left resize:screenSizeX*.5;screenSizeY/2
+bind s:alt,cmd corner bottom-left resize:screenSizeX*.5;screenSizeY/2
+bind d:alt,cmd corner bottom-right resize:screenSizeX*.5;screenSizeY/2
+bind q:alt,cmd ${full}
+bind left:alt,cmd throw 0
+bind right:alt,cmd throw 1
