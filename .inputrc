@@ -1,0 +1,3 @@
+# zsh-like history searching for bash
+"\e[A": history-search-backward
+"\e[B": history-search-forward
