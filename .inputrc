@@ -1,3 +1,13 @@
 # zsh-like history searching for bash
 "\e[A": history-search-backward
 "\e[B": history-search-forward
+
+# better autocompletion
+TAB: menu-complete
+# shift-tab to go back
+"\e[Z": menu-complete-backward
+set menu-complete-display-prefix on
+set show-all-if-ambiguous on
+set completion-ignore-case on
+set colored-completion-prefix on
+set colored-stats on
