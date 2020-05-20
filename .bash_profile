@@ -1,15 +1,19 @@
 # Custom Functions
+take () {
+	mkdir -p -- "$1" && cd -P -- "$1"
+}
+
 build_and_run() {
-        docker-compose build $1 && docker-compose run $1
+	docker-compose build $1 && docker-compose run $1
 }
 
 ## useful for things like sorting a table while keeping the column headers intact:
 ## $ kubectl get top nodes | header sort -nk2 -r
 header() {
-        IFS=
-        read -r header
-        printf '%s\n' "$header"
-        "$@"
+	IFS=
+	read -r header
+	printf '%s\n' "$header"
+	"$@"
 }
 
 # Aliases
