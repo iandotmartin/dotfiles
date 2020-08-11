@@ -27,3 +27,7 @@ alias dcr='docker-compose run --service-ports'
 alias dcb='docker-compose build'
 alias dcrb=build_and_run
 alias kc=kubectl
+
+# needed for history to not get screwed up in tmux
+shopt -s histappend
+export PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
