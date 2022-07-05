@@ -27,7 +27,18 @@ alias dcr='docker-compose run --service-ports'
 alias dcb='docker-compose build'
 alias dcrb=build_and_run
 alias kc=kubectl
+alias ll='ls -la'
+alias be='bundle exec'
 
-# needed for history to not get screwed up in tmux
+# Shell Opts and Binds
+shopt -s autocd
+bind '\C-w:backward-kill-word'
+
+## needed for history to not get screwed up in tmux
 shopt -s histappend
 export PROMPT_COMMAND="history -a;history -c;history -r;$PROMPT_COMMAND"
+
+# Path and Environment
+export HISTSIZE=8000
+export HISTFILESIZE=8000
+export HOMEBREW_NO_AUTO_UPDATE=1
